@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body onload="onLoad()" class="center">
+    <div class="w-100" style="background-color: #fff">
+      <div class="jumbotron">
+        <h1 class="display-4">Way finder</h1>
+        <p class="lead">You can find a way from cell 1 to 36.</p>
+        <p class="lead">
+          White: blank spaces, gray: walls, green - start and end.
+        </p>
+        <button id="gen-btn" class="btn btn-primary">Generate new</button>
+        <button onclick="findWay()" id="find-btn" class="btn btn-primary">
+          Find the way
+        </button>
+      </div>
+    </div>
+
+    <div class="alert alert-success display-none" role="alert" id="alert-found">
+      Way found.
+    </div>
+
+    <div
+      class="alert alert-danger display-none"
+      role="alert"
+      id="alert-not-found"
+    >
+      Way was not found. Generate new map.
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
